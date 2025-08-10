@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Itch.io Projects</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #eee;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+    a {
+      color: #00cfff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #00ffe7;
+      text-decoration: underline;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+      max-width: 700px;
+      width: 100%;
+    }
+    header h1 {
+      font-weight: 600;
+      font-size: 3rem;
+      margin-bottom: 0.25rem;
+      text-shadow: 0 0 10px #00e0ff99;
+    }
+    header p {
+      font-weight: 300;
+      font-size: 1.2rem;
+      color: #a0e9ffcc;
+      margin-bottom: 1rem;
+    }
+    header img.banner {
+      width: 100%;
+      max-height: 280px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 0 30px #00e0ffbb;
+      margin-bottom: 1.5rem;
+      filter: drop-shadow(0 0 10px #00e0ff);
+    }
+
+    /* Projects grid */
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    .project-card {
+      background: rgba(0, 207, 255, 0.1);
+      border-radius: 20px;
+      box-shadow: 0 8px 15px rgba(0, 207, 255, 0.25);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      color: #c4f9ff;
+    }
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 207, 255, 0.5);
+    }
+    .project-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 3px solid #00e0ff;
+      transition: filter 0.3s ease;
+    }
+    .project-card:hover .project-image {
+      filter: brightness(1.1) saturate(1.2);
+    }
+    .project-content {
+      padding: 1rem 1.3rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .project-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 10px #00cfffaa;
+    }
+    .project-description {
+      font-size: 1rem;
+      color: #a0e9ffcc;
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+    .project-link {
+      align-self: flex-start;
+      padding: 0.5rem 1rem;
+      background: #00cfffcc;
+      border-radius: 12px;
+      color: #003a47;
+      font-weight: 600;
+      box-shadow: 0 5px 10px #00b4e4bb;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    .project-link:hover {
+      background: #00e0ff;
+      color: #002b35;
+      box-shadow: 0 8px 18px #00e0ffcc;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #5eeaffcc;
+      text-align: center;
+      max-width: 700px;
+      width: 100%;
+      user-select: none;
+      border-top: 1px solid #00e0ff55;
+      letter-spacing: 0.06em;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      .project-image {
+        height: 140px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    
+    <img class="banner" src="https://tse3.mm.bing.net/th/id/OIP.WzgHxIQjPDRBaF-0397oqgHaFS?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Banner GIF" />
+
+    <h1>My Itch.io Projects</h1>
+    <p>A collection of my game projects or projects I helped working on. Click any card to explore!</p>
+  </header>
+
+  <main>
+    <a href="https://dvskanemone.itch.io/physic-stacker" class="project-card" target="_blank" rel="noopener">
+      <img class="project-image" src="https://img.itch.zone/aW1hZ2UvMzcyNTU2Mi8yMjE3NDcwOS5wbmc=/original/xjFsOi.png" alt="Project 1" />
+      <div class="project-content">
+        <div class="project-title">Physic Stacker</div>
+        <div class="project-description">My first game. Its a physics based arcade stacker game! .</div>
+        <div class="project-link">View on itch.io</div>
+      </div>
+    </a>
+
+    <a href="https://nubdevelopment.itch.io/billies-platformer" class="project-card" target="_blank" rel="noopener">
+      <img class="project-image" src="https://img.itch.zone/aW1hZ2UvMzc0MTkzOC8yMjI3MTI0Mi5wbmc=/original/RSJC3T.png" alt="Project 2" />
+      <div class="project-content">
+        <div class="project-title">Billies Platformer</div>
+        <div class="project-description">A platformer game I programed for an indie team (go support them ^^)</div>
+        <div class="project-link">View on itch.io</div>
+      </div>
+    </a>
+
+    <a href="https://dvskanemone.itch.io/eco-runner" class="project-card" target="_blank" rel="noopener">
+      <img class="project-image" src="https://via.placeholder.com/400x180.png?text=Project+3+Image" alt="Project 3" />
+      <div class="project-content">
+        <div class="project-title">Eco Runner</div>
+        <div class="project-description">A short simple low effort Arcade type game.</div>
+        <div class="project-link">View on itch.io</div>
+      </div>
+    </a>
+  </main>
+
+  <footer>
+    &copy; 2025 DVSK-HILL &mdash; <a href="https://dvskanemone.itch.io/" target="_blank" rel="noopener">Itch.io</a> page (support me by donating ^^)
+  </footer>
+</body>
+</html>
